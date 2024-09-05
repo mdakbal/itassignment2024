@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motorcycle Offers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .logo {
+            text-align: center;
+            padding: 20px;
+            background-color: #e6f2ff;
+        }
+        .logo img {
+            width: 150px;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            flex: 1;
+        }
+        .panel {
+            background-color: #fff;
+            border: 2px solid lightblue;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            overflow: hidden;
+            text-align: center;
+        }
+        .panel h1 {
+            background-color: #007acc;
+            color: white;
+            margin: 0;
+            padding: 10px 20px;
+            font-size: 24px;
+        }
+        .panel-body {
+            padding: 20px;
+        }
+        .panel-body img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            border: 1px solid lightblue;
+        }
+        .offer {
+            font-size: 1.2em;
+            color: #d9534f;
+            margin: 10px 0;
+        }
+        .rating {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .fa-star.checked {
+            color: orange;
+        }
+        footer {
+            background-color: #e6f2ff;
+            color: black;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+            border-top: 2px solid lightblue;
+        }
+        footer a {
+            color: black;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        footer a:hover {
+            color: #007acc;
+        }
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    padding: 20px;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 24px;
+    display: none; /* Hidden by default */
+    cursor: pointer;
+    z-index: 1000; /* Ensures it stays on top */
+    transition: opacity 0.3s;
+}
+
+.scroll-to-top:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+    </style>
+</head>
+<body>
+   
+    <div id="scrollToTop" class="scroll-to-top" onclick="scrollToTop()">
+        &#8593; <!-- Unicode for up arrow -->
+    </div>
+
+    <script>
+        // Get the button
+        const scrollToTopBtn = document.getElementById("scrollToTop");
+
+        // Show the button when scrolling
+        window.onscroll = function() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
+
+        // Function to scroll to the top
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+
+    <div class="logo">
+        <img src="BMWLOGO.jpeg" alt="BMW Logo">
+    </div>
+
+    <div class="container">
+        <div class="panel">
+            <h1>BMW 3 Series</h1>
+            <div class="panel-body">
+                <img src="BMW 3 Series.jpg" alt="BMW 3 Series">
+                <div class="offer">SUMMER OFFER 5%</div>
+                <div class="rating">
+                    <h2>RATING</h2>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel">
+            <h1>BMW 5 Series</h1>
+            <div class="panel-body">
+                <img src="BMW 5 Series.webp" alt="BMW 5 Series">
+                <div class="offer">WINTER OFFER 10%</div>
+                <div class="rating">
+                    <h2>RATING</h2>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel">
+            <h1>BMW X5</h1>
+            <div class="panel-body">
+                <img src="BMW X5" alt="BMW X5">
+                <div class="offer">TIHAR OFFER 30%</div>
+                <div class="rating">
+                    <h2>RATING</h2>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel">
+            <h1>BMW 7 Series</h1>
+            <div class="panel-body">
+                <img src="BMW 7 Series.jpg" alt="BMW 7 Series">
+                <div class="offer">SEPTEMBER OFFER 25%</div>
+                <div class="rating">
+                    <h2>RATING</h2>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel">
+            <h1>BMW iX</h1>
+            <div class="panel-body">
+                <img src="BMW iX.webp" alt="BMW iX">
+                <div class="offer">OFFER DISCOUNT 10%</div>
+                <div class="rating">
+                    <h2>RATING</h2>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel">
+            <h1>BMW Z4</h1>
+            <div class="panel-body">
+                <img src="BMW Z4.webp" alt="BMW Z4">
+                <div class="offer">NEW YEAR OFFER 5%</div>
+                <div class="rating">
+                    <h2>RATING</h2>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; Bayerische Motoren Werke. All Rights Reserved.</p>
+        <p>
+            <a href="privacy.html">Privacy Policy</a> | 
+            <a href="terms.html">Terms of Service</a> | 
+            <a href="contact.html">Contact Us</a>
+        </p>
+    </footer>
+
+</body>
+</html>

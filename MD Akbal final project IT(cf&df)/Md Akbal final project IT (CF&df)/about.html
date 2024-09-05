@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - BMW</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        nav {
+            width: 100%;
+            background-color: #e6f2ff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid lightblue;
+        }
+        .logo img {
+            width: 100px;
+        }
+        .menu a {
+            text-decoration: none;
+            color: black;
+            padding: 10px 20px;
+            font-size: 20px;
+            position: relative;
+            transition: color 0.3s;
+        }
+        .menu a:hover {
+            color: #007acc;
+        }
+        .menu a:before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background: #007acc;
+            transition: width 0.4s;
+        }
+        .menu a:hover:before {
+            width: 100%;
+        }
+        .register a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 20px;
+            background: #007acc;
+            border-radius: 8px;
+            transition: background 0.3s, border 0.3s;
+        }
+        .register a:hover {
+            background: transparent;
+            border: 1px solid #007acc;
+            color: #007acc;
+        }
+        .content {
+            padding: 120px 20px 20px;
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            border: 2px solid lightblue;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .contact-form h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #007acc;
+            text-align: center;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: lightblue;
+            outline: none;
+        }
+        .contact-form button {
+            width: 100%;
+            padding: 10px;
+            background: #007acc;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .contact-form button:hover {
+            background: #005f99;
+        }
+        .contact-info {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            border: 2px solid lightblue;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .contact-info h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #007acc;
+            text-align: center;
+        }
+        .contact-info p {
+            margin-bottom: 10px;
+            line-height: 1.6;
+            color: #333;
+        }
+        footer {
+            background-color: #e6f2ff;
+            color: black;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+            border-top: 2px solid lightblue;
+        }
+        footer a {
+            color: black;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        footer a:hover {
+            color: #007acc;
+        }
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    padding: 20px;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 24px;
+    display: none; /* Hidden by default */
+    cursor: pointer;
+    z-index: 1000; /* Ensures it stays on top */
+    transition: opacity 0.3s;
+}
+
+.scroll-to-top:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+    </style>
+</head>
+<body>
+    
+    <div id="scrollToTop" class="scroll-to-top" onclick="scrollToTop()">
+        &#8593; <!-- Unicode for up arrow -->
+    </div>
+
+    <script>
+        // Get the button
+        const scrollToTopBtn = document.getElementById("scrollToTop");
+
+        // Show the button when scrolling
+        window.onscroll = function() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
+
+        // Function to scroll to the top
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+
+    <nav>
+        <div class="logo">
+            <img src="BMWLOGO.jpeg" alt="BMW Logo">
+        </div>
+        <div class="menu">
+            <a href="index.html"><b>HOME</b></a>
+            <a href="model.html"><b>MODEL</b></a>
+            <a href="offer.html"><b>OFFER</b></a>
+            <a href="about.html"><b>ABOUT</b></a>
+        </div>
+        <div class="register">
+            <a href="register.html">Register</a>
+        </div>
+    </nav>
+   
+    <div class="content">
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form action="submit_contact_form.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        
+        <div class="contact-info">
+            <h2>Our Contact Information</h2>
+            <p><strong>Address:</strong> Bayerische Motoren Werke, Tinkune, KTM</p>
+            <p><strong>Phone:</strong> +977986594504</p>
+            <p><strong>Email:</strong> BMWSHOWROOMGMAIL.COM</p>
+            <p>Feel free to reach out to us with any questions or concerns. We look forward to hearing from you!</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; Bayerische Motoren Werke. All Rights Reserved.</p>
+        <p>
+            <a href="privacy.html">Privacy Policy</a> | 
+            <a href="terms.html">Terms of Service</a> | 
+            <a href="contact.html">Contact Us</a>
+        </p>
+    </footer>
+   
+</body>
+</html>
